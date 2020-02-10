@@ -11,15 +11,24 @@ namespace Variables
       //create var for my full name
       var fullName = "Justin Sorensen";
       //create var for today and set to today's date
-      var today = "02/10/2020";
+      DateTime date1 = DateTime.Now;
+      var today = date1;
       //console print the above variables on a single line
       Console.WriteLine("My name is " + fullName + ". The date is " + today + ". I've had " + numberOfCupsOfCoffee + " cups of coffee today.");
       //Ask user for name
       Console.WriteLine("What is your name?");
       //Store response in var user
       var user = Console.ReadLine();
-      // Welcome user with their name
-      Console.WriteLine("Welcome, ", user, "!!");
+      //something special is user is named Alice
+      if (user == "Alice")
+      {
+        Console.WriteLine("Alice, Welcome to Wonderland!");
+      }
+      else
+      {
+        // Welcome user with their name
+        Console.WriteLine("Welcome, ", user, "!!");
+      }
       //Ask user to enter a number store as operand 1
       Console.WriteLine(user + ", please enter a number.");
       var number1 = Console.ReadLine();
@@ -39,11 +48,11 @@ namespace Variables
       //find remainder and save in var remainder
       var remainder = operand1 % operand2;
       //print results to screen in meaningful way
-      Console.WriteLine(number1, " plus ", number2, " = ", sum);
-      Console.WriteLine(number1, " minus ", number2, " = ", difference);
-      Console.WriteLine(number1, " divided by ", number2, " = ", quotient);
-      Console.WriteLine(number1, " multiplied by ", number2, " = ", product);
-      Console.WriteLine(number1, " divided by ", number2, " leaves a remainder of ", remainder);
+      Console.WriteLine("The sum of these numbers is " + sum);
+      Console.WriteLine("The difference between these numbers is " + difference);
+      Console.WriteLine("The quotient of these numbers is " + quotient);
+      Console.WriteLine("The product of these numbers is " + product);
+      Console.WriteLine("The remainder after dividing these numbers is " + remainder);
 
 
 
